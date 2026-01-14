@@ -9,6 +9,8 @@ final class QuoteStore {
     self.defaults = defaults
   }
 
+  var allQuotes: [Quote] { quotes }
+
   func quoteForToday() -> Quote {
     guard !quotes.isEmpty else {
       return Quote(text: "Welcome to Calm-Line.", author: "Unknown")
@@ -39,6 +41,10 @@ final class QuoteStore {
       return quotes[(idx + 1) % quotes.count]
     }
     return quotes.randomElement() ?? current
+  }
+
+  func quote(with id: UUID) -> Quote? {
+    quotes.first { $0.id == id }
   }
 
   // MARK: - Private

@@ -4,49 +4,87 @@ struct ContentView: View {
   @StateObject private var viewModel = QuoteViewModel()
 
   var body: some View {
-    NavigationStack {
-      ZStack {
-        LinearGradient(
-          colors: [
-            Color(.systemBackground),
-            Color(.secondarySystemBackground)
-          ],
-          startPoint: .topLeading,
-          endPoint: .bottomTrailing
-        )
-        .ignoresSafeArea()
-
-        VStack(spacing: 18) {
-          Text("Calm-Line")
-            .font(.largeTitle.bold())
-            .frame(maxWidth: .infinity, alignment: .leading)
-
-          Spacer(minLength: 0)
-
-          QuoteCardView(quote: viewModel.quote, showAuthor: true)
-            .id(viewModel.quote.id)
-            .transition(.opacity.combined(with: .scale(scale: 0.98)))
-
-          Button {
-            withAnimation(.spring(response: 0.35, dampingFraction: 0.85)) {
-              viewModel.refresh()
-            }
-          } label: {
-            Label("Refresh", systemImage: "arrow.clockwise")
-              .font(.headline)
-              .padding(.vertical, 10)
-              .frame(maxWidth: .infinity)
-          }
-          .buttonStyle(.borderedProminent)
-          .tint(.primary.opacity(0.85))
-          .accessibilityLabel("Refresh quote")
-
-          Spacer(minLength: 0)
-        }
-        .padding()
+    TabView {
+      NavigationStack {
+        todayView
+          .navigationTitle("Calm-Line")
+          .navigationBarTitleDisplayMode(.large)
       }
-      .navigationBarTitleDisplayMode(.inline)
+      .tabItem {
+        Label("Today", systemImage: "sun.max")
+      }
+
+      NavigationStack {
+        FavoritesView(viewModel: viewModel)
+      }
+      .tabItem {
+        Label("Favorites", systemImage: "heart.fill")
+      }
+
+      NavigationStack {
+        SettingsView()
+      }
+      .tabItem {
+        Label("Settings", systemImage: "gearshape")
+      }
     }
+  }
+
+  private var todayView: some View {
+    ZStack {
+      LinearGradient(
+        colors: [
+          Color(.systemBackground),
+          Color(.secondarySystemBackground)
+        ],
+        startPoint: .topLeading,
+        endPoint: .bottomTrailing
+      )
+      .ignoresSafeArea()
+
+      VStack(spacing: 18) {
+        Spacer(minLength: 0)
+
+        QuoteCardView(quote: viewModel.quote, showAuthor: true)
+          .id(viewModel.quote.id)
+          .transition(.opacity.combined(with: .scale(scale: 0.98)))
+
+        actionsRow
+
+        Spacer(minLength: 0)
+      }
+      .padding()
+    }
+  }
+
+  private var actionsRow: some View {
+    HStack(spacing: 12) {
+      Button {
+        withAnimation(.spring(response: 0.35, dampingFraction: 0.85)) {
+          viewModel.refresh()
+        }
+      } label: {
+        Label("Refresh", systemImage: "arrow.clockwise")
+      }
+      .accessibilityLabel("Refresh quote")
+
+      Button {
+        viewModel.toggleFavoriteForCurrentQuote()
+      } label: {
+        Label("Favorite", systemImage: viewModel.isCurrentFavorite ? "heart.fill" : "heart")
+      }
+      .accessibilityLabel(viewModel.isCurrentFavorite ? "Remove from favorites" : "Add to favorites")
+
+      Button { } label: {
+        Label("Share", systemImage: "square.and.arrow.up")
+      }
+      .disabled(true)
+      .accessibilityLabel("Share quote")
+    }
+    .labelStyle(.iconOnly)
+    .font(.title3.weight(.semibold))
+    .buttonStyle(.bordered)
+    .controlSize(.large)
   }
 }
 

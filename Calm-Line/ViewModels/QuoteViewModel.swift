@@ -40,6 +40,15 @@ final class QuoteViewModel: ObservableObject {
     }
     favoriteIDs = favorites.favoriteIDs
   }
+
+  func unfavorite(_ quote: Quote) {
+    favorites.remove(quote.id)
+    favoriteIDs = favorites.favoriteIDs
+  }
+
+  func shareText(for quote: Quote) -> String {
+    "“\(quote.text)” — \(quote.author)"
+  }
 }
 
 

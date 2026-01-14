@@ -2,6 +2,7 @@ import SwiftUI
 
 struct ContentView: View {
   @StateObject private var viewModel = QuoteViewModel()
+  @State private var isSharing = false
 
   var body: some View {
     TabView {
@@ -55,6 +56,9 @@ struct ContentView: View {
       }
       .padding()
     }
+    .sheet(isPresented: $isSharing) {
+      ShareSheet(items: [viewModel.shareText(for: viewModel.quote)])
+    }
   }
 
   private var actionsRow: some View {
@@ -75,10 +79,11 @@ struct ContentView: View {
       }
       .accessibilityLabel(viewModel.isCurrentFavorite ? "Remove from favorites" : "Add to favorites")
 
-      Button { } label: {
+      Button {
+        isSharing = true
+      } label: {
         Label("Share", systemImage: "square.and.arrow.up")
       }
-      .disabled(true)
       .accessibilityLabel("Share quote")
     }
     .labelStyle(.iconOnly)

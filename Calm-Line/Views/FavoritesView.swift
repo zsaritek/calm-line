@@ -2,6 +2,7 @@ import SwiftUI
 
 struct FavoritesView: View {
   @ObservedObject var viewModel: QuoteViewModel
+  @State private var selectedQuote: Quote?
 
   var body: some View {
     List {
@@ -21,6 +22,10 @@ struct FavoritesView: View {
             QuoteCardView(quote: quote, showAuthor: true, isCompact: true)
               .listRowInsets(EdgeInsets(top: 8, leading: 16, bottom: 8, trailing: 16))
               .listRowSeparator(.hidden)
+              .contentShape(Rectangle())
+              .onTapGesture {
+                selectedQuote = quote
+              }
               .accessibilityLabel("Favorite quote")
               .accessibilityValue("\(quote.text), \(quote.author)")
           }
@@ -32,6 +37,9 @@ struct FavoritesView: View {
     }
     .listStyle(.plain)
     .navigationTitle("Favorites")
+    .sheet(item: $selectedQuote) { quote in
+      FavoriteDetailView(quote: quote, viewModel: viewModel)
+    }
   }
 }
 

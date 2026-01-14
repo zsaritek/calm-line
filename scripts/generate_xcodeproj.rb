@@ -53,10 +53,14 @@ end
 # Wire sources
 app_group = src_group.children.find { |g| g.display_name == "App" }
 models_group = src_group.children.find { |g| g.display_name == "Models" }
+services_group = src_group.children.find { |g| g.display_name == "Services" }
+view_models_group = src_group.children.find { |g| g.display_name == "ViewModels" }
 views_group = src_group.children.find { |g| g.display_name == "Views" }
 
 add_swift_sources(project, target, app_group, "#{SRC_ROOT}/App")
 add_swift_sources(project, target, models_group, "#{SRC_ROOT}/Models")
+add_swift_sources(project, target, services_group, "#{SRC_ROOT}/Services")
+add_swift_sources(project, target, view_models_group, "#{SRC_ROOT}/ViewModels")
 add_swift_sources(project, target, views_group, "#{SRC_ROOT}/Views")
 
 # Resources (assets)

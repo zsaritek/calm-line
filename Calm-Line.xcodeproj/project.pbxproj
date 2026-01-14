@@ -7,159 +7,165 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		02C5BF7E3A925403520BBF21 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8363939A404416CCB2BC3B91 /* Assets.xcassets */; };
-		4364ACBFA32665D68DDF97CF /* CalmLineApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56A87AD768985EDB4038AB2 /* CalmLineApp.swift */; };
-		511C5905FC8F8F80E5C3B0A0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30ED7C3138E27DC178DC64F6 /* ContentView.swift */; };
-		5A3A1752928C7CCD75F05090 /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D30BC43D70953E85D4BAC70 /* Quote.swift */; };
-		5BDBB5C31FF7B68332EDE71A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51E24EEDAC97702962D83EE3 /* Foundation.framework */; };
-		9D9AC5071880FA55CA0F27E2 /* QuoteCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37495A64125B6CE8539A6AD1 /* QuoteCardView.swift */; };
+		0A96D71009BD1396F13243F8 /* QuoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C107605A2979F91470A79E34 /* QuoteViewModel.swift */; };
+		576CA0B6C2233036E46F59C1 /* QuoteStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6110F1FC6675077F0AEA1BE1 /* QuoteStore.swift */; };
+		6F05676099887F5F162A02AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F01D23CE9413BA749EBD0EE9 /* Assets.xcassets */; };
+		C3E41EA47CA69A3F9E80F3F2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE61ADEA455ACE384C94AC0D /* Foundation.framework */; };
+		D41681370228F72DED3A1C67 /* QuoteCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0D02A7C785EF975827CA9D /* QuoteCardView.swift */; };
+		E21255B9C5540D6473F45841 /* CalmLineApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D79349FEB056C74146A969 /* CalmLineApp.swift */; };
+		EE47C08007C223703E0140B7 /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CEF8873EA31816571F6154 /* Quote.swift */; };
+		F44A8B4324A57F45A9536793 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD341ECE91288251A44F8F9 /* ContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0D30BC43D70953E85D4BAC70 /* Quote.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
-		30ED7C3138E27DC178DC64F6 /* ContentView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		37495A64125B6CE8539A6AD1 /* QuoteCardView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QuoteCardView.swift; sourceTree = "<group>"; };
-		51E24EEDAC97702962D83EE3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		67D255810692CD40CA53C194 /* Contents.json */ = {isa = PBXFileReference; includeInIndex = 1; path = Contents.json; sourceTree = "<group>"; };
-		8363939A404416CCB2BC3B91 /* Assets.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		B56A87AD768985EDB4038AB2 /* CalmLineApp.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CalmLineApp.swift; sourceTree = "<group>"; };
-		C2BAA00447075B6914259DD2 /* Calm-Line.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Calm-Line.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F2242681780598BFC6F169A8 /* Contents.json */ = {isa = PBXFileReference; includeInIndex = 1; path = Contents.json; sourceTree = "<group>"; };
+		1C1B9E49748BEB39720B1B67 /* Contents.json */ = {isa = PBXFileReference; includeInIndex = 1; path = Contents.json; sourceTree = "<group>"; };
+		1F32B2A0054F317C18F5A281 /* Contents.json */ = {isa = PBXFileReference; includeInIndex = 1; path = Contents.json; sourceTree = "<group>"; };
+		44D79349FEB056C74146A969 /* CalmLineApp.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CalmLineApp.swift; sourceTree = "<group>"; };
+		4BD341ECE91288251A44F8F9 /* ContentView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		6110F1FC6675077F0AEA1BE1 /* QuoteStore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QuoteStore.swift; sourceTree = "<group>"; };
+		71CEF8873EA31816571F6154 /* Quote.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
+		BD0D02A7C785EF975827CA9D /* QuoteCardView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QuoteCardView.swift; sourceTree = "<group>"; };
+		BE61ADEA455ACE384C94AC0D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		C107605A2979F91470A79E34 /* QuoteViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QuoteViewModel.swift; sourceTree = "<group>"; };
+		C808824755EF82463A6C6E7C /* Calm-Line.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Calm-Line.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F01D23CE9413BA749EBD0EE9 /* Assets.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		C0F5E7AAFE18662C770874BE /* Frameworks */ = {
+		449BB7EF1623ADC272209D2C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5BDBB5C31FF7B68332EDE71A /* Foundation.framework in Frameworks */,
+				C3E41EA47CA69A3F9E80F3F2 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		053866DFE843EFCBAC035826 = {
+		0B35BA0EC5E132CA8E68BB75 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CCDB4E8F2E2832C31DC4ABEB /* Products */,
-				82043C50A6C12258A9DC7DE0 /* Frameworks */,
-				9A44B27FF2F22A116DD53B57 /* Calm-Line */,
+				C808824755EF82463A6C6E7C /* Calm-Line.app */,
 			);
+			name = Products;
 			sourceTree = "<group>";
 		};
-		15DB70C37924F18D861DCC89 /* ViewModels */ = {
+		0FC34AB9D91A44B4CAF595B7 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				C107605A2979F91470A79E34 /* QuoteViewModel.swift */,
 			);
 			name = ViewModels;
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
-		1DDF55863FAD26EF50F384E4 /* Assets.xcassets */ = {
+		12A9E64FE89C7146B51402E0 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				67D255810692CD40CA53C194 /* Contents.json */,
-				B6B89D65CFE94D73A87D7B20 /* AppIcon.appiconset */,
-			);
-			name = Assets.xcassets;
-			path = Assets.xcassets;
-			sourceTree = "<group>";
-		};
-		512ABE690BECD01BE7054810 /* App */ = {
-			isa = PBXGroup;
-			children = (
-				B56A87AD768985EDB4038AB2 /* CalmLineApp.swift */,
-				30ED7C3138E27DC178DC64F6 /* ContentView.swift */,
-			);
-			name = App;
-			path = App;
-			sourceTree = "<group>";
-		};
-		66004CE411BBC1D8C20AC669 /* Services */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Services;
-			path = Services;
-			sourceTree = "<group>";
-		};
-		82043C50A6C12258A9DC7DE0 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				967C9F044C81CB04D5021A7A /* iOS */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		967C9F044C81CB04D5021A7A /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				51E24EEDAC97702962D83EE3 /* Foundation.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		9A44B27FF2F22A116DD53B57 /* Calm-Line */ = {
-			isa = PBXGroup;
-			children = (
-				512ABE690BECD01BE7054810 /* App */,
-				F35D6061F5FFBD9D9075FBBC /* Models */,
-				66004CE411BBC1D8C20AC669 /* Services */,
-				15DB70C37924F18D861DCC89 /* ViewModels */,
-				C51DDF93742645516927D14A /* Views */,
-				1DDF55863FAD26EF50F384E4 /* Assets.xcassets */,
-				8363939A404416CCB2BC3B91 /* Assets.xcassets */,
-			);
-			name = "Calm-Line";
-			path = "Calm-Line";
-			sourceTree = "<group>";
-		};
-		B6B89D65CFE94D73A87D7B20 /* AppIcon.appiconset */ = {
-			isa = PBXGroup;
-			children = (
-				F2242681780598BFC6F169A8 /* Contents.json */,
-			);
-			name = AppIcon.appiconset;
-			path = AppIcon.appiconset;
-			sourceTree = "<group>";
-		};
-		C51DDF93742645516927D14A /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				37495A64125B6CE8539A6AD1 /* QuoteCardView.swift */,
-			);
-			name = Views;
-			path = Views;
-			sourceTree = "<group>";
-		};
-		CCDB4E8F2E2832C31DC4ABEB /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				C2BAA00447075B6914259DD2 /* Calm-Line.app */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		F35D6061F5FFBD9D9075FBBC /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				0D30BC43D70953E85D4BAC70 /* Quote.swift */,
+				71CEF8873EA31816571F6154 /* Quote.swift */,
 			);
 			name = Models;
 			path = Models;
 			sourceTree = "<group>";
 		};
+		4B91FA5E7EB26D79D6F76788 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C2E487B08E41B2FD8C81BE63 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		59E35FEFC6D4621EDB57BFE3 /* Calm-Line */ = {
+			isa = PBXGroup;
+			children = (
+				DE95BA94BF8F48BDFA1C4AE1 /* App */,
+				12A9E64FE89C7146B51402E0 /* Models */,
+				8E1E172F9125E44D369DF1DA /* Services */,
+				0FC34AB9D91A44B4CAF595B7 /* ViewModels */,
+				63484BF06A29964E424002D5 /* Views */,
+				8827159C4A33A61782B6B998 /* Assets.xcassets */,
+				F01D23CE9413BA749EBD0EE9 /* Assets.xcassets */,
+			);
+			name = "Calm-Line";
+			path = "Calm-Line";
+			sourceTree = "<group>";
+		};
+		63484BF06A29964E424002D5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BD0D02A7C785EF975827CA9D /* QuoteCardView.swift */,
+			);
+			name = Views;
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8827159C4A33A61782B6B998 /* Assets.xcassets */ = {
+			isa = PBXGroup;
+			children = (
+				1F32B2A0054F317C18F5A281 /* Contents.json */,
+				DF17436B1DEAED7E1CD1F2AA /* AppIcon.appiconset */,
+			);
+			name = Assets.xcassets;
+			path = Assets.xcassets;
+			sourceTree = "<group>";
+		};
+		8E1E172F9125E44D369DF1DA /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				6110F1FC6675077F0AEA1BE1 /* QuoteStore.swift */,
+			);
+			name = Services;
+			path = Services;
+			sourceTree = "<group>";
+		};
+		BF7F0970809B66F25F8AD52F = {
+			isa = PBXGroup;
+			children = (
+				0B35BA0EC5E132CA8E68BB75 /* Products */,
+				4B91FA5E7EB26D79D6F76788 /* Frameworks */,
+				59E35FEFC6D4621EDB57BFE3 /* Calm-Line */,
+			);
+			sourceTree = "<group>";
+		};
+		C2E487B08E41B2FD8C81BE63 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				BE61ADEA455ACE384C94AC0D /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		DE95BA94BF8F48BDFA1C4AE1 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				44D79349FEB056C74146A969 /* CalmLineApp.swift */,
+				4BD341ECE91288251A44F8F9 /* ContentView.swift */,
+			);
+			name = App;
+			path = App;
+			sourceTree = "<group>";
+		};
+		DF17436B1DEAED7E1CD1F2AA /* AppIcon.appiconset */ = {
+			isa = PBXGroup;
+			children = (
+				1C1B9E49748BEB39720B1B67 /* Contents.json */,
+			);
+			name = AppIcon.appiconset;
+			path = AppIcon.appiconset;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F19F838EEF2EAE454D0D3943 /* Calm-Line */ = {
+		C2A796449F64AF24AD97E2DA /* Calm-Line */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AE39467914C3560ADC319631 /* Build configuration list for PBXNativeTarget "Calm-Line" */;
+			buildConfigurationList = 6A281BC1C404834C823E09FE /* Build configuration list for PBXNativeTarget "Calm-Line" */;
 			buildPhases = (
-				FBD31DB887AD3916DA71B42D /* Sources */,
-				C0F5E7AAFE18662C770874BE /* Frameworks */,
-				30C61EC8453AA8FF30DB8912 /* Resources */,
+				25950D65BCA20094E0AC6D61 /* Sources */,
+				449BB7EF1623ADC272209D2C /* Frameworks */,
+				D3F410CC5BEF025268608137 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -167,19 +173,19 @@
 			);
 			name = "Calm-Line";
 			productName = "Calm-Line";
-			productReference = C2BAA00447075B6914259DD2 /* Calm-Line.app */;
+			productReference = C808824755EF82463A6C6E7C /* Calm-Line.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		1C6ED7A1704DB7A79B814CB7 /* Project object */ = {
+		875D6C690986908C3E135B61 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1600;
 				LastUpgradeCheck = 1600;
 			};
-			buildConfigurationList = 352291C069A1731F88F96439 /* Build configuration list for PBXProject "Calm-Line" */;
+			buildConfigurationList = B9C6128AA9C7BC99DCE3FE28 /* Build configuration list for PBXProject "Calm-Line" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -187,122 +193,47 @@
 				en,
 				Base,
 			);
-			mainGroup = 053866DFE843EFCBAC035826;
+			mainGroup = BF7F0970809B66F25F8AD52F;
 			minimizedProjectReferenceProxies = 0;
 			preferredProjectObjectVersion = 77;
-			productRefGroup = CCDB4E8F2E2832C31DC4ABEB /* Products */;
+			productRefGroup = 0B35BA0EC5E132CA8E68BB75 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F19F838EEF2EAE454D0D3943 /* Calm-Line */,
+				C2A796449F64AF24AD97E2DA /* Calm-Line */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		30C61EC8453AA8FF30DB8912 /* Resources */ = {
+		D3F410CC5BEF025268608137 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				02C5BF7E3A925403520BBF21 /* Assets.xcassets in Resources */,
+				6F05676099887F5F162A02AC /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		FBD31DB887AD3916DA71B42D /* Sources */ = {
+		25950D65BCA20094E0AC6D61 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4364ACBFA32665D68DDF97CF /* CalmLineApp.swift in Sources */,
-				511C5905FC8F8F80E5C3B0A0 /* ContentView.swift in Sources */,
-				5A3A1752928C7CCD75F05090 /* Quote.swift in Sources */,
-				9D9AC5071880FA55CA0F27E2 /* QuoteCardView.swift in Sources */,
+				E21255B9C5540D6473F45841 /* CalmLineApp.swift in Sources */,
+				F44A8B4324A57F45A9536793 /* ContentView.swift in Sources */,
+				EE47C08007C223703E0140B7 /* Quote.swift in Sources */,
+				576CA0B6C2233036E46F59C1 /* QuoteStore.swift in Sources */,
+				0A96D71009BD1396F13243F8 /* QuoteViewModel.swift in Sources */,
+				D41681370228F72DED3A1C67 /* QuoteCardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		15A936AB5F0839C23D16EBC5 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "Calm-Line";
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.zsaritek.calmline;
-				PRODUCT_MODULE_NAME = CalmLine;
-				SDKROOT = iphoneos;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		4A10F8AEFEE1452A630A5743 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				MTL_FAST_MATH = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				SWIFT_VERSION = 5.0;
-			};
-			name = Release;
-		};
-		97CF36FF24598ADFCA067B5F /* Debug */ = {
+		162CE374C7C5EE6013065E81 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -324,7 +255,7 @@
 			};
 			name = Debug;
 		};
-		E191A341EFD5E8E18F2C8923 /* Debug */ = {
+		5FAAC633DC274AD75769406C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -385,28 +316,105 @@
 			};
 			name = Debug;
 		};
+		ABD10F8F4467356206564555 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Calm-Line";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zsaritek.calmline;
+				PRODUCT_MODULE_NAME = CalmLine;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C19CD35588B4851E476632E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		352291C069A1731F88F96439 /* Build configuration list for PBXProject "Calm-Line" */ = {
+		6A281BC1C404834C823E09FE /* Build configuration list for PBXNativeTarget "Calm-Line" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E191A341EFD5E8E18F2C8923 /* Debug */,
-				4A10F8AEFEE1452A630A5743 /* Release */,
+				ABD10F8F4467356206564555 /* Release */,
+				162CE374C7C5EE6013065E81 /* Debug */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AE39467914C3560ADC319631 /* Build configuration list for PBXNativeTarget "Calm-Line" */ = {
+		B9C6128AA9C7BC99DCE3FE28 /* Build configuration list for PBXProject "Calm-Line" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				15A936AB5F0839C23D16EBC5 /* Release */,
-				97CF36FF24598ADFCA067B5F /* Debug */,
+				5FAAC633DC274AD75769406C /* Debug */,
+				C19CD35588B4851E476632E3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 1C6ED7A1704DB7A79B814CB7 /* Project object */;
+	rootObject = 875D6C690986908C3E135B61 /* Project object */;
 }

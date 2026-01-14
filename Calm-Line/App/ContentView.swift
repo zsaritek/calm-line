@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct ContentView: View {
-  private let quote = Quote.samples.first ?? Quote(text: "Welcome to Calm-Line.", author: "Unknown")
+  @StateObject private var viewModel = QuoteViewModel()
 
   var body: some View {
     NavigationStack {
@@ -23,7 +23,23 @@ struct ContentView: View {
 
           Spacer(minLength: 0)
 
-          QuoteCardView(quote: quote, showAuthor: true)
+          QuoteCardView(quote: viewModel.quote, showAuthor: true)
+            .id(viewModel.quote.id)
+            .transition(.opacity.combined(with: .scale(scale: 0.98)))
+
+          Button {
+            withAnimation(.spring(response: 0.35, dampingFraction: 0.85)) {
+              viewModel.refresh()
+            }
+          } label: {
+            Label("Refresh", systemImage: "arrow.clockwise")
+              .font(.headline)
+              .padding(.vertical, 10)
+              .frame(maxWidth: .infinity)
+          }
+          .buttonStyle(.borderedProminent)
+          .tint(.primary.opacity(0.85))
+          .accessibilityLabel("Refresh quote")
 
           Spacer(minLength: 0)
         }

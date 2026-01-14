@@ -7,25 +7,33 @@ struct SettingsView: View {
   @AppStorage(SettingsKeys.showAuthor) private var showAuthor = true
 
   var body: some View {
-    Form {
-      Section("Preferences") {
-        Toggle("Haptics", isOn: $hapticsEnabled)
-          .accessibilityLabel("Haptics")
+    ZStack {
+      AppBackground()
 
-        Toggle("Show Author", isOn: $showAuthor)
-          .accessibilityLabel("Show author")
-      }
+      Form {
+        Section("Preferences") {
+          Toggle("Haptics", isOn: $hapticsEnabled)
+            .accessibilityLabel("Haptics")
 
-      Section {
-        Button(role: .destructive) {
-          viewModel.resetFavorites()
-        } label: {
-          Text("Reset Favorites")
+          Toggle("Show Author", isOn: $showAuthor)
+            .accessibilityLabel("Show author")
         }
-        .accessibilityLabel("Reset favorites")
+
+        Section {
+          Button(role: .destructive) {
+            viewModel.resetFavorites()
+            if hapticsEnabled { Haptics.lightImpact() }
+          } label: {
+            Text("Reset Favorites")
+          }
+          .accessibilityLabel("Reset favorites")
+        }
       }
+      .scrollContentBackground(.hidden)
+      .navigationTitle("Settings")
+      .toolbarBackground(.ultraThinMaterial, for: .navigationBar)
+      .toolbarBackground(.visible, for: .navigationBar)
     }
-    .navigationTitle("Settings")
   }
 }
 

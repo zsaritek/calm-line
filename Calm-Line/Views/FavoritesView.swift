@@ -6,40 +6,48 @@ struct FavoritesView: View {
   let showAuthor: Bool
 
   var body: some View {
-    List {
-      if viewModel.favoriteQuotes.isEmpty {
-        Section {
-          ContentUnavailableView(
-            "No favorites yet",
-            systemImage: "heart",
-            description: Text("Tap the heart on a quote to save it here.")
-          )
-          .frame(maxWidth: .infinity, alignment: .center)
-          .listRowBackground(Color.clear)
-        }
-      } else {
-        Section {
-          ForEach(viewModel.favoriteQuotes) { quote in
-            QuoteCardView(quote: quote, showAuthor: showAuthor, isCompact: true)
-              .listRowInsets(EdgeInsets(top: 8, leading: 16, bottom: 8, trailing: 16))
-              .listRowSeparator(.hidden)
-              .contentShape(Rectangle())
-              .onTapGesture {
-                selectedQuote = quote
-              }
-              .accessibilityLabel("Favorite quote")
-              .accessibilityValue("\(quote.text), \(quote.author)")
+    ZStack {
+      AppBackground()
+
+      List {
+        if viewModel.favoriteQuotes.isEmpty {
+          Section {
+            ContentUnavailableView(
+              "No favorites yet",
+              systemImage: "heart",
+              description: Text("Tap the heart on a quote to save it here.")
+            )
+            .frame(maxWidth: .infinity, alignment: .center)
+            .listRowBackground(Color.clear)
           }
-          .onDelete { indexSet in
-            viewModel.removeFavorites(at: indexSet)
+        } else {
+          Section {
+            ForEach(viewModel.favoriteQuotes) { quote in
+              QuoteCardView(quote: quote, showAuthor: showAuthor, isCompact: true)
+                .listRowInsets(EdgeInsets(top: 10, leading: 18, bottom: 10, trailing: 18))
+                .listRowSeparator(.hidden)
+                .listRowBackground(Color.clear)
+                .contentShape(Rectangle())
+                .onTapGesture {
+                  selectedQuote = quote
+                }
+                .accessibilityLabel("Favorite quote")
+                .accessibilityValue("\(quote.text), \(quote.author)")
+            }
+            .onDelete { indexSet in
+              viewModel.removeFavorites(at: indexSet)
+            }
           }
         }
       }
-    }
-    .listStyle(.plain)
-    .navigationTitle("Favorites")
-    .sheet(item: $selectedQuote) { quote in
-      FavoriteDetailView(quote: quote, viewModel: viewModel, showAuthor: showAuthor)
+      .scrollContentBackground(.hidden)
+      .listStyle(.plain)
+      .navigationTitle("Favorites")
+      .toolbarBackground(.ultraThinMaterial, for: .navigationBar)
+      .toolbarBackground(.visible, for: .navigationBar)
+      .sheet(item: $selectedQuote) { quote in
+        FavoriteDetailView(quote: quote, viewModel: viewModel, showAuthor: showAuthor)
+      }
     }
   }
 }

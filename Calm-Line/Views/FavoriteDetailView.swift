@@ -7,36 +7,46 @@ struct FavoriteDetailView: View {
 
   @Environment(\.dismiss) private var dismiss
   @State private var isSharing = false
+  @AppStorage(SettingsKeys.hapticsEnabled) private var hapticsEnabled = true
 
   var body: some View {
     NavigationStack {
-      VStack(spacing: 16) {
-        QuoteCardView(quote: quote, showAuthor: showAuthor)
+      ZStack {
+        AppBackground()
 
-        HStack(spacing: 12) {
-          Button {
-            isSharing = true
-          } label: {
-            Label("Share", systemImage: "square.and.arrow.up")
-              .frame(maxWidth: .infinity)
-          }
-          .buttonStyle(.borderedProminent)
+        VStack(spacing: 18) {
+          QuoteCardView(quote: quote, showAuthor: showAuthor)
+            .padding(.top, 10)
 
-          Button(role: .destructive) {
-            viewModel.unfavorite(quote)
-            dismiss()
-          } label: {
-            Label("Unfavorite", systemImage: "heart.slash")
-              .frame(maxWidth: .infinity)
+          HStack(spacing: 14) {
+            Button {
+              isSharing = true
+            } label: {
+              Image(systemName: "square.and.arrow.up")
+            }
+            .buttonStyle(CircleIconButtonStyle(fill: .cyan))
+            .accessibilityLabel("Share quote")
+
+            Button(role: .destructive) {
+              viewModel.unfavorite(quote)
+              if hapticsEnabled { Haptics.lightImpact() }
+              dismiss()
+            } label: {
+              Image(systemName: "heart.slash")
+            }
+            .buttonStyle(CircleIconButtonStyle(fill: .pink))
+            .accessibilityLabel("Remove from favorites")
           }
-          .buttonStyle(.bordered)
+
+          Spacer(minLength: 0)
         }
-
-        Spacer(minLength: 0)
+        .padding(.horizontal, 22)
+        .padding(.bottom, 22)
       }
-      .padding()
       .navigationTitle("Quote")
       .navigationBarTitleDisplayMode(.inline)
+      .toolbarBackground(.ultraThinMaterial, for: .navigationBar)
+      .toolbarBackground(.visible, for: .navigationBar)
       .toolbar {
         ToolbarItem(placement: .topBarTrailing) {
           Button("Done") { dismiss() }

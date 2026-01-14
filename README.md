@@ -59,7 +59,9 @@ Kept intentionally simple.
 
 ## Screenshots
 
-_(Coming soon)_
+Add a screenshot to `Screenshots/` and it will show here:
+
+![Calm-Line](Screenshots/calmLine.png)
 
 ---
 

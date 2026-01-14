@@ -61,7 +61,7 @@ Kept intentionally simple.
 
 Add a screenshot to `Screenshots/` and it will show here:
 
-![Calm-Line](Screenshots/calmLine.png)
+<img src="Screenshots/calmLine.png" alt="Calm-Line" width="320">
 
 ---
 

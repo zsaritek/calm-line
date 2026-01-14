@@ -3,6 +3,7 @@ import SwiftUI
 struct FavoriteDetailView: View {
   let quote: Quote
   @ObservedObject var viewModel: QuoteViewModel
+  let showAuthor: Bool
 
   @Environment(\.dismiss) private var dismiss
   @State private var isSharing = false
@@ -10,7 +11,7 @@ struct FavoriteDetailView: View {
   var body: some View {
     NavigationStack {
       VStack(spacing: 16) {
-        QuoteCardView(quote: quote, showAuthor: true)
+        QuoteCardView(quote: quote, showAuthor: showAuthor)
 
         HStack(spacing: 12) {
           Button {
@@ -43,13 +44,13 @@ struct FavoriteDetailView: View {
       }
     }
     .sheet(isPresented: $isSharing) {
-      ShareSheet(items: [viewModel.shareText(for: quote)])
+      ShareSheet(items: [viewModel.shareText(for: quote, showAuthor: showAuthor)])
     }
   }
 }
 
 #Preview {
-  FavoriteDetailView(quote: Quote.samples[0], viewModel: QuoteViewModel())
+  FavoriteDetailView(quote: Quote.samples[0], viewModel: QuoteViewModel(), showAuthor: true)
 }
 
 

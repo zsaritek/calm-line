@@ -3,6 +3,8 @@ import SwiftUI
 struct ContentView: View {
   @StateObject private var viewModel = QuoteViewModel()
   @State private var isSharing = false
+  @AppStorage(SettingsKeys.hapticsEnabled) private var hapticsEnabled = true
+  @AppStorage(SettingsKeys.showAuthor) private var showAuthor = true
 
   var body: some View {
     TabView {
@@ -16,14 +18,14 @@ struct ContentView: View {
       }
 
       NavigationStack {
-        FavoritesView(viewModel: viewModel)
+        FavoritesView(viewModel: viewModel, showAuthor: showAuthor)
       }
       .tabItem {
         Label("Favorites", systemImage: "heart.fill")
       }
 
       NavigationStack {
-        SettingsView()
+        SettingsView(viewModel: viewModel)
       }
       .tabItem {
         Label("Settings", systemImage: "gearshape")
@@ -46,7 +48,7 @@ struct ContentView: View {
       VStack(spacing: 18) {
         Spacer(minLength: 0)
 
-        QuoteCardView(quote: viewModel.quote, showAuthor: true)
+        QuoteCardView(quote: viewModel.quote, showAuthor: showAuthor)
           .id(viewModel.quote.id)
           .transition(.opacity.combined(with: .scale(scale: 0.98)))
 
@@ -57,7 +59,7 @@ struct ContentView: View {
       .padding()
     }
     .sheet(isPresented: $isSharing) {
-      ShareSheet(items: [viewModel.shareText(for: viewModel.quote)])
+      ShareSheet(items: [viewModel.shareText(for: viewModel.quote, showAuthor: showAuthor)])
     }
   }
 
@@ -67,6 +69,7 @@ struct ContentView: View {
         withAnimation(.spring(response: 0.35, dampingFraction: 0.85)) {
           viewModel.refresh()
         }
+        if hapticsEnabled { Haptics.lightImpact() }
       } label: {
         Label("Refresh", systemImage: "arrow.clockwise")
       }
@@ -74,6 +77,7 @@ struct ContentView: View {
 
       Button {
         viewModel.toggleFavoriteForCurrentQuote()
+        if hapticsEnabled { Haptics.lightImpact() }
       } label: {
         Label("Favorite", systemImage: viewModel.isCurrentFavorite ? "heart.fill" : "heart")
       }

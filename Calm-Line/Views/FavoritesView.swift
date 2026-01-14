@@ -3,6 +3,7 @@ import SwiftUI
 struct FavoritesView: View {
   @ObservedObject var viewModel: QuoteViewModel
   @State private var selectedQuote: Quote?
+  let showAuthor: Bool
 
   var body: some View {
     List {
@@ -19,7 +20,7 @@ struct FavoritesView: View {
       } else {
         Section {
           ForEach(viewModel.favoriteQuotes) { quote in
-            QuoteCardView(quote: quote, showAuthor: true, isCompact: true)
+            QuoteCardView(quote: quote, showAuthor: showAuthor, isCompact: true)
               .listRowInsets(EdgeInsets(top: 8, leading: 16, bottom: 8, trailing: 16))
               .listRowSeparator(.hidden)
               .contentShape(Rectangle())
@@ -38,14 +39,14 @@ struct FavoritesView: View {
     .listStyle(.plain)
     .navigationTitle("Favorites")
     .sheet(item: $selectedQuote) { quote in
-      FavoriteDetailView(quote: quote, viewModel: viewModel)
+      FavoriteDetailView(quote: quote, viewModel: viewModel, showAuthor: showAuthor)
     }
   }
 }
 
 #Preview {
   NavigationStack {
-    FavoritesView(viewModel: QuoteViewModel())
+    FavoritesView(viewModel: QuoteViewModel(), showAuthor: true)
   }
 }
 

@@ -46,8 +46,16 @@ final class QuoteViewModel: ObservableObject {
     favoriteIDs = favorites.favoriteIDs
   }
 
-  func shareText(for quote: Quote) -> String {
-    "“\(quote.text)” — \(quote.author)"
+  func resetFavorites() {
+    favorites.reset()
+    favoriteIDs = favorites.favoriteIDs
+  }
+
+  func shareText(for quote: Quote, showAuthor: Bool) -> String {
+    if showAuthor {
+      return "“\(quote.text)” — \(quote.author)"
+    }
+    return "“\(quote.text)”"
   }
 }
 

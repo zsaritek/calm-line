@@ -59,7 +59,6 @@ Kept intentionally simple.
 
 ## Screenshots
 
-Add a screenshot to `Screenshots/` and it will show here:
 
 <img src="Screenshots/calmLine.png" alt="Calm-Line" width="320">
 
